@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163408620-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-163408620-1');
+    </script>
+    <style>
+        .cont {
+            background-image: url("/assets/bg.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 558px;
+            width: 100%;
+        }
+
+        .text {
+            text-align: center;
+            display: block;
+            font-size: x-large;
+            margin: 10px;
+        }
+    </style>
+
+    <link rel="icon" href="/assets/favicon.png" type="image/gif" sizes="16x16">
+    <title>COVID-19|Dashboard</title>
+    <meta name="description" content="COVID-19 Tracker, data visualiser using maps and slot notifier." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+
+<body class="preload">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <div class="ui inverted header">
+                    <img src="/assets/headericon.jpg" alt="icon">
+                    COVID-19|Updates
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/global">Global Stats</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/info">More info</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                    <a class="nav-link" href="/district">Search District</a>
+                  </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/vaccine">Vaccine</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <div class="cont">
+        <p class="text" style="margin-top: 60px; font-weight: bold;">Did you get your jab???</p>
+        <a class="text" href="https://www.cowin.gov.in/" target="_blank" style="text-decoration: rgb(rgba(13, 159, 243, 0.911), green, blue); text-decoration: underline">Register Now</a>
+    </div>
+
+
+    <div class="ui inverted vertical footer segment">
+        <div class="ui container foot">
+            <div>
+                Data Source:
+                <a
+                    href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSc_2y5N0I67wDU38DjDh35IZSIS30rQf7_NYZhtYYGU1jJYT6_kDx4YpF-qw0LSlGsBYP8pqM_a1Pd/pubhtml">COVID19-India
+                    : Patient Database</a><strong> </strong>
+            </div>
+            <strong><a href="mailto: neelabhd.ug18.ec@nitp.ac.in">Contact Us</a></strong>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.widgets.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', { packages: ['corechart', 'line'] });
+    google.charts.load('current', { 'packages': ['bar'] });
+</script>
+<script type="text/javascript">
+    $(function () {
+        $('.nav-item a').filter(function () { return this.href == location.href }).parent().addClass('active').siblings().removeClass('active')
+    })
+</script>
+
+</html>
